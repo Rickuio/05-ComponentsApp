@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { Text, View } from 'react-native'
 import { globalStyles } from '../../../config/theme/theme';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -16,7 +17,7 @@ const animationMenuItems = [
     icon: 'albums-outline',
     component: 'Animation102Screen',
   },
-]
+];
 
 export const menuItems = [
   // 02-menuItems
@@ -75,12 +76,12 @@ export const HomeScreen = () => {
   return (
     <View style={[globalStyles.mainContainer]}>
         <View style={[globalStyles.globalMargin]}>
-          <ScrollView> 
+          <ScrollView>
             <Title text="Opciones del menú" safe={true} />
             {
               animationMenuItems.map( (item, index) => (
                 <MenuItem key={ item.component } 
-                {...item} 
+                {...item}
                 isFirst={ index === 0 }
                 isLast={ index === animationMenuItems.length - 1 }
                 />
@@ -89,8 +90,8 @@ export const HomeScreen = () => {
             <View style={{ marginTop: 20 }} />
             {
               menuItems.map( (item, index) => (
-                <MenuItem key={ item.component } 
-                {...item} 
+                <MenuItem key={ item.component }
+                {...item}
                 isFirst={ index === 0 }
                 isLast={ index === menuItems.length - 1 }
                 />
@@ -99,8 +100,8 @@ export const HomeScreen = () => {
             <View style={{ marginTop: 20 }} />
             {
               uiMenuItems.map( (item, index) => (
-                <MenuItem key={ item.component } 
-                {...item} 
+                <MenuItem key={ item.component }
+                {...item}
                 isFirst={ index === 0 }
                 isLast={ index === uiMenuItems.length - 1 }
                 />
@@ -109,5 +110,5 @@ export const HomeScreen = () => {
           </ScrollView>
         </View>
     </View>
-  )
-}
+  );
+};
